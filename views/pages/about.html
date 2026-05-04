@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>B&amp;R Co. | Nuestro Equipo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#b6c4ff",
+                        "surface-bright": "#2f3a47",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed": "#241a00",
+                        "on-secondary-container": "#c9b37b",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-primary": "#3d2f00",
+                        "surface-tint": "#DAA520",
+                        "surface-variant": "#2a3643",
+                        "tertiary-fixed-dim": "#b6c4ff",
+                        "inverse-on-surface": "#26313e",
+                        "primary-container": "#c5a021",
+                        "primary-fixed-dim": "#DAA520",
+                        "primary": "#DAA520",
+                        "on-tertiary": "#06287b",
+                        "outline": "#99907b",
+                        "surface-container-highest": "#2a3643",
+                        "surface-dim": "#081420",
+                        "background": "#081420",
+                        "on-error": "#690005",
+                        "secondary": "#dbc58b",
+                        "on-secondary-fixed-variant": "#544517",
+                        "surface-container-lowest": "#040f1b",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#ffe089",
+                        "on-primary-fixed": "#241a00",
+                        "outline-variant": "#4d4635",
+                        "secondary-fixed-dim": "#dbc58b",
+                        "on-primary-container": "#483800",
+                        "on-surface": "#d8e3f5",
+                        "tertiary-fixed": "#dce1ff",
+                        "surface-container-high": "#1f2b38",
+                        "inverse-surface": "#d8e3f5",
+                        "on-background": "#d8e3f5",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-container-low": "#111c29",
+                        "secondary-fixed": "#f8e1a4",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#745b00",
+                        "tertiary-container": "#89a0f8",
+                        "on-tertiary-container": "#173385",
+                        "on-tertiary-fixed-variant": "#274092",
+                        "on-secondary": "#3c2f03",
+                        "surface-container": "#15202d",
+                        "surface": "#081420",
+                        "on-tertiary-fixed": "#001550",
+                        "secondary-container": "#544517"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #081420;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Noto Serif', serif;
+        }
+
+        .blueprint-grid {
+            background-image:
+                linear-gradient(rgba(77, 70, 53, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77, 70, 53, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background min-h-screen flex flex-col blueprint-grid">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#081420]/80 backdrop-blur-xl">
+        <div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+            <div class="text-2xl font-serif tracking-tighter text-[#DAA520]">B&amp;R Co.</div>
+            <div class="hidden md:flex items-center space-x-10">
+                <a class="text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
+                    href="/index.html">Home</a>
+                <a class="text-[#DAA520] border-b-2 border-[#DAA520] pb-1 font-bold transition-colors duration-300"
+                    href="#">Quienes Somos</a>
+                <a class="text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
+                    href="projects.html">Projects</a>
+                <a class="text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
+                    href="portafolio.html">Portafolio</a>
+                <a class="text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
+                    href="contacto.html">Contacto</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-on-surface focus:outline-none">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <button
+                class="bg-primary text-on-primary px-8 py-2.5 font-bold tracking-tight rounded-DEFAULT hover:bg-primary-container active:scale-95 transition-all duration-300 hidden md:block">
+                Consultation
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#081420]/95 backdrop-blur-xl px-12 py-6 space-y-4">
+            <a class="block text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
+                href="/index.html">Home</a>
+            <a class="block text-[#DAA520] border-b-2 border-[#DAA520] pb-1 font-bold transition-colors duration-300"
+                href="#">Quienes Somos</a>
+            <a class="block text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
+                href="projects.html">Projects</a>
+            <a class="block text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
+                href="portafolio.html">Portafolio</a>
+            <a class="block text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
+                href="contacto.html">Contacto</a>
+            <button
+                class="bg-primary text-on-primary px-8 py-2.5 font-bold tracking-tight rounded-DEFAULT hover:bg-primary-container active:scale-95 transition-all duration-300 w-full mt-4">
+                Consultation
+            </button>
+        </div>
+    </nav>
+    <main class="flex-grow container mx-auto px-6 pt-24 pb-24 max-w-7xl">
+        <!-- Section Header -->
+        <div class="mb-20 text-center md:text-left max-w-3xl">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-on-background mb-6 leading-tight">
+                El Alma de la <span class="text-primary italic">Arquitectura</span>
+            </h1>
+            <p class="text-on-surface-variant font-body text-lg md:text-xl leading-relaxed opacity-80">
+                Somos un equipo de jóvenes apasionados y comprometidos en ofrecer el mejor servicio a cada cliente.
+                Creamos espacios con frescura, rigor y atención personalizada, para que cada proyecto refleje su
+                identidad y supere las expectativas.
+            </p>
+        </div>
+        <!-- Team Grid - Asymmetric Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start justify-items-center">
+            <!-- Profile 1: Ivan Solis Cordero -->
+            <div class="group relative w-full max-w-[520px]">
+                <div class="relative overflow-hidden aspect-[3/4] bg-surface-container-low">
+                    <img alt="Iván Solís Cordero"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
+                        data-alt="Professional portrait of Iván Solís Cordero"
+                        src="../assets/images/Ivan.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60">
+                    </div>
+                </div>
+                <div
+                    class="mt-[-60px] relative z-10 ml-6 md:ml-12 mr-6 bg-surface-container-high p-8 md:p-12 shadow-[0_24px_48px_rgba(4,15,27,0.4)] backdrop-blur-sm border-l-4 border-primary">
+                    <h2 class="text-3xl md:text-4xl font-bold text-on-surface mb-2 font-headline">Iván Solís Cordero
+                    </h2>
+                    <p class="text-primary font-label uppercase tracking-[0.2em] text-sm mb-6">Ingeniero Civil</p>
+                    <p class="text-on-surface-variant font-body mb-8 leading-relaxed max-w-md">
+                        Estudiante universitario con visión técnica que impulsa el desarrollo del estadio. Iván aporta
+                        soluciones ingenieriles frescas para que el proyecto avance con rigor, funcionalidad y estilo.
+                    </p>
+                    <div class="flex gap-4">
+                        <button
+                            class="bg-primary text-on-primary px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-primary-container transition-all active:scale-95 shadow-lg">
+                            <span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+                            Contactar
+                        </button>
+                        <button
+                            class="border border-outline-variant/30 text-primary px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-surface-variant transition-all active:scale-95">
+                            <span class="material-symbols-outlined text-sm" data-icon="phone">phone</span>
+                            Llamar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Profile 2: Bryan Flores Umaña -->
+            <div class="group relative w-full max-w-[520px] md:mt-12">
+                <div class="relative overflow-hidden aspect-[3/4] bg-surface-container-low">
+                    <img alt="Bryan Flores Umaña"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
+                        data-alt="Professional man with glasses and a thoughtful expression in a workspace with 3D architectural models and blueprint displays"
+                        src="../assets/images/Bryan.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60">
+                    </div>
+                </div>
+                <div
+                    class="mt-[-60px] relative z-10 ml-6 md:ml-12 mr-6 bg-surface-container-high p-8 md:p-12 shadow-[0_24px_48px_rgba(4,15,27,0.4)] backdrop-blur-sm border-l-4 border-primary">
+                    <h2 class="text-2xl md:text-3xl font-bold text-on-surface mb-2 font-headline">Bryan Flores Umaña
+                    </h2>
+                    <p class="text-primary font-label uppercase tracking-[0.2em] text-xs mb-4">Arquitecto</p>
+                    <p class="text-on-surface-variant font-body mb-6 text-sm leading-relaxed">
+                        Estudiante universitario enfocado en mejorar el estadio con ideas creativas y funcionales. Bryan
+                        aporta visión arquitectónica y detalle, asegurando un diseño atractivo y pensado para el usuario.
+                    </p>
+                    <div class="flex gap-4">
+                        <button
+                            class="bg-primary text-on-primary w-full py-3 rounded-lg font-bold flex justify-center items-center gap-2 hover:bg-primary-container transition-all active:scale-95">
+                            <span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+                            Contactar
+                        </button>
+                        <button
+                            class="border border-outline-variant/30 text-primary w-full py-3 rounded-lg font-bold flex justify-center items-center gap-2 hover:bg-surface-variant transition-all active:scale-95">
+                            <span class="material-symbols-outlined text-sm" data-icon="phone">phone</span>
+                            Llamada
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background Narrative / Quote -->
+        <div class="mt-32 border-t border-outline-variant/10 pt-16">
+            <div class="max-w-5xl mx-auto text-center">
+                <span class="text-primary font-headline text-8xl opacity-20 select-none">"</span>
+                <p class="text-2xl md:text-3xl font-headline italic text-on-surface -mt-12 leading-relaxed max-w-3xl mx-auto">
+                    No construimos estructuras; diseñamos los legados donde la vida ocurre.
+                </p>
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div class="p-6 bg-surface-container-low rounded-lg">
+                        <h4 class="text-primary font-headline text-4xl mb-2">2+</h4>
+                        <p class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Años de experiencia</p>
+                    </div>
+                    <div class="p-6 bg-surface-container-low rounded-lg">
+                        <h4 class="text-primary font-headline text-4xl mb-2">2</h4>
+                        <p class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Personas capaces de transformar ideas en realidad </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#081420] w-full border-t border-white/10">
+        <div class="max-w-[1200px] mx-auto px-6 py-20 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <span class="text-xl font-serif text-[#DAA520] mb-4 block">B&amp;R Co.</span>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8">
+                        Elevando el estándar de la arquitectura técnica y el diseño de autor desde 2010.
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <span
+                            class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary">language</span>
+                        <span
+                            class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary">share</span>
+                        <span
+                            class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary">mail</span>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Navegación</h5>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-sm"
+                                href="/index.html">Home</a></li>
+                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-sm" href="#">Quienes
+                                Somos</a></li>
+                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-sm"
+                                href="projects.html">Projects</a></li>
+                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-sm"
+                                href="portafolio.html">Portafolio</a></li>
+                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-sm"
+                                href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Contacto</h5>
+                    <address class="not-italic text-slate-500 text-sm space-y-4">
+                        <p>Santa María de Dota, <br /> San José, Costa Rica</p>
+                        <p>+506 8698 1314, <br /> +506 8673 9628</p>
+                        <p>atelier@brco-arch.com</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="px-6 py-8 border-t border-white/5 max-w-[1200px] mx-auto text-center">
+            <p class="text-slate-500 text-xs mb-4">© 2024 B&amp;R Co. Architectural Atelier. All rights reserved.</p>
+            <div class="flex justify-center flex-wrap gap-8">
+                <span class="text-slate-600 text-[10px] uppercase tracking-widest">ISO 9001 Certified</span>
+                <span class="text-slate-600 text-[10px] uppercase tracking-widest">Autodesk Platinum Partner</span>
+            </div>
+        </div>
+    </footer>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+        class="md:hidden fixed bottom-0 w-full z-50 bg-[#081420]/80 backdrop-blur-xl flex justify-around items-center px-4 py-3 pb-safe shadow-[0_-8px_30px_rgb(4,15,27,0.4)]">
+        <a class="flex flex-col items-center text-gray-500 font-['Manrope'] text-[10px] uppercase tracking-widest"
+            href="/index.html">
+            <span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+            <span>Home</span>
+        </a>
+        <a class="flex flex-col items-center text-gray-500 font-['Manrope'] text-[10px] uppercase tracking-widest"
+            href="projects.html">
+            <span class="material-symbols-outlined mb-1" data-icon="layers">layers</span>
+            <span>Projects</span>
+        </a>
+        <a class="flex flex-col items-center text-[#DAA520] scale-110 transition-all font-['Manrope'] text-[10px] uppercase tracking-widest font-bold"
+            href="#">
+            <span class="material-symbols-outlined mb-1" data-icon="menu_book">menu_book</span>
+            <span>Atelier</span>
+        </a>
+        <a class="flex flex-col items-center text-gray-500 font-['Manrope'] text-[10px] uppercase tracking-widest"
+            href="portafolio.html">
+            <span class="material-symbols-outlined mb-1" data-icon="domain">domain</span>
+            <span>Portafolio</span>
+        </a>
+        <a class="flex flex-col items-center text-gray-500 font-['Manrope'] text-[10px] uppercase tracking-widest"
+            href="contacto.html">
+            <span class="material-symbols-outlined mb-1" data-icon="mail">mail</span>
+            <span>Contacto</span>
+        </a>
+    </nav>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

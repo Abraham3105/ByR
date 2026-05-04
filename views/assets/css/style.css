@@ -1,0 +1,6 @@
+body { font-family: 'Manrope', sans-serif; background-color: #081420; }
+.font-serif { font-family: 'Noto Serif', serif; }
+.blueprint-grid {
+    background-image: radial-gradient(rgba(234, 194, 67, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
