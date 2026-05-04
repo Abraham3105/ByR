@@ -16,12 +16,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
+    <script>
+        if (typeof tailwind !== 'undefined') {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
                         "tertiary": "#b6c4ff",
                         "surface-bright": "#2f3a47",
                         "error": "#ffb4ab",
@@ -84,6 +85,7 @@
                 },
             }
         }
+        }
     </script>
     <style>
         .material-symbols-outlined {
@@ -118,17 +120,15 @@
 <body class="bg-background text-on-background min-h-screen flex flex-col blueprint-grid">
     <!-- TopNavBar -->
     <nav class="fixed top-0 w-full z-50 bg-[#081420]/80 backdrop-blur-xl">
-        <div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
-            <div class="text-2xl font-serif tracking-tighter text-[#DAA520]">B&amp;R Co.</div>
-            <div class="hidden md:flex items-center space-x-10">
+        <div class="flex justify-between items-center px-4 md:px-8 lg:px-12 py-4 md:py-6 max-w-[1920px] mx-auto w-full">
+            <div class="text-lg md:text-2xl font-serif tracking-tighter text-[#DAA520]">B&amp;R Co.</div>
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-10">
                 <a class="text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
-                    href="/index.html">Home</a>
+                    href="/index.html">Inicio</a>
                 <a class="text-[#DAA520] border-b-2 border-[#DAA520] pb-1 font-bold transition-colors duration-300"
                     href="#">Quienes Somos</a>
                 <a class="text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
-                    href="projects.html">Projects</a>
-                <a class="text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
-                    href="portafolio.html">Portafolio</a>
+                    href="projects.html">Proyectos</a>
                 <a class="text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
                     href="contacto.html">Contacto</a>
             </div>
@@ -142,40 +142,39 @@
             </button>
         </div>
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#081420]/95 backdrop-blur-xl px-12 py-6 space-y-4">
-            <a class="block text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
+        <div id="mobile-menu" class="hidden md:hidden bg-[#081420]/95 backdrop-blur-xl px-4 py-4 space-y-3 border-t border-white/10">
+            <a class="block text-sm text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300 py-2"
                 href="/index.html">Home</a>
-            <a class="block text-[#DAA520] border-b-2 border-[#DAA520] pb-1 font-bold transition-colors duration-300"
-                href="#">Quienes Somos</a>
-            <a class="block text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
-                href="projects.html">Projects</a>
-            <a class="block text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
-                href="portafolio.html">Portafolio</a>
-            <a class="block text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300"
+            <a class="block text-sm text-[#DAA520] border-b-2 border-[#DAA520] pb-2 font-bold transition-colors duration-300 py-1"
+                href="about.html">Quienes Somos</a>
+            <a class="block text-sm text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300 py-2"
+                href="projects.html">Proyectos</a>
+
+            <a class="block text-sm text-slate-400 font-medium hover:text-[#DAA520] transition-colors duration-300 py-2"
                 href="contacto.html">Contacto</a>
             <button
-                class="bg-primary text-on-primary px-8 py-2.5 font-bold tracking-tight rounded-DEFAULT hover:bg-primary-container active:scale-95 transition-all duration-300 w-full mt-4">
+                class="bg-primary text-on-primary px-6 py-2.5 font-bold text-sm tracking-tight rounded-DEFAULT hover:bg-primary-container active:scale-95 transition-all duration-300 w-full mt-4">
                 Consultation
             </button>
         </div>
     </nav>
-    <main class="flex-grow container mx-auto px-6 pt-24 pb-24 max-w-7xl">
+    <main class="flex-grow container mx-auto px-4 sm:px-6 md:px-8 pt-20 sm:pt-24 md:pt-28 pb-24 md:pb-32 max-w-7xl">
         <!-- Section Header -->
-        <div class="mb-20 text-center md:text-left max-w-3xl">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-on-background mb-6 leading-tight">
+        <div class="mb-12 sm:mb-16 md:mb-20 text-center md:text-left max-w-3xl px-0">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-on-background mb-4 sm:mb-6 leading-tight">
                 El Alma de la <span class="text-primary italic">Arquitectura</span>
             </h1>
-            <p class="text-on-surface-variant font-body text-lg md:text-xl leading-relaxed opacity-80">
+            <p class="text-on-surface-variant font-body text-base sm:text-lg md:text-xl leading-relaxed opacity-80">
                 Somos un equipo de jóvenes apasionados y comprometidos en ofrecer el mejor servicio a cada cliente.
                 Creamos espacios con frescura, rigor y atención personalizada, para que cada proyecto refleje su
                 identidad y supere las expectativas.
             </p>
         </div>
         <!-- Team Grid - Asymmetric Layout -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start justify-items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start justify-items-center md:justify-items-start">
             <!-- Profile 1: Ivan Solis Cordero -->
             <div class="group relative w-full max-w-[520px]">
-                <div class="relative overflow-hidden aspect-[3/4] bg-surface-container-low">
+                <div class="relative overflow-hidden aspect-[3/4] bg-surface-container-low rounded-lg">
                     <img alt="Iván Solís Cordero"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
                         data-alt="Professional portrait of Iván Solís Cordero"
@@ -185,31 +184,33 @@
                     </div>
                 </div>
                 <div
-                    class="mt-[-60px] relative z-10 ml-6 md:ml-12 mr-6 bg-surface-container-high p-8 md:p-12 shadow-[0_24px_48px_rgba(4,15,27,0.4)] backdrop-blur-sm border-l-4 border-primary">
-                    <h2 class="text-3xl md:text-4xl font-bold text-on-surface mb-2 font-headline">Iván Solís Cordero
+                    class="mt-[-40px] sm:mt-[-50px] md:mt-[-60px] relative z-10 mx-3 sm:mx-4 md:ml-8 md:mr-4 bg-surface-container-high p-6 sm:p-8 md:p-12 shadow-[0_24px_48px_rgba(4,15,27,0.4)] backdrop-blur-sm border-l-4 border-primary rounded-lg">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface mb-1 md:mb-2 font-headline">Iván Solís Cordero
                     </h2>
-                    <p class="text-primary font-label uppercase tracking-[0.2em] text-sm mb-6">Ingeniero Civil</p>
-                    <p class="text-on-surface-variant font-body mb-8 leading-relaxed max-w-md">
+                    <p class="text-primary font-label uppercase tracking-[0.2em] text-xs md:text-sm mb-4 md:mb-6">Ingeniero Civil</p>
+                    <p class="text-on-surface-variant font-body mb-4 md:mb-8 text-sm md:text-base leading-relaxed">
                         Estudiante universitario con visión técnica que impulsa el desarrollo del estadio. Iván aporta
                         soluciones ingenieriles frescas para que el proyecto avance con rigor, funcionalidad y estilo.
                     </p>
-                    <div class="flex gap-4">
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
                         <button
-                            class="bg-primary text-on-primary px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-primary-container transition-all active:scale-95 shadow-lg">
-                            <span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
-                            Contactar
+                            class="bg-primary text-on-primary px-4 sm:px-6 py-2.5 md:py-3 rounded-lg font-bold text-sm md:text-base flex items-center justify-center gap-2 hover:bg-primary-container transition-all active:scale-95 shadow-lg">
+                            <span class="material-symbols-outlined text-lg" data-icon="mail">mail</span>
+                            <span class="hidden sm:inline">Contactar</span>
+                            <span class="sm:hidden">Mail</span>
                         </button>
                         <button
-                            class="border border-outline-variant/30 text-primary px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-surface-variant transition-all active:scale-95">
-                            <span class="material-symbols-outlined text-sm" data-icon="phone">phone</span>
-                            Llamar
+                            class="border border-outline-variant/30 text-primary px-4 sm:px-6 py-2.5 md:py-3 rounded-lg font-bold text-sm md:text-base flex items-center justify-center gap-2 hover:bg-surface-variant transition-all active:scale-95">
+                            <span class="material-symbols-outlined text-lg" data-icon="phone">phone</span>
+                            <span class="hidden sm:inline">Llamar</span>
+                            <span class="sm:hidden">Tel</span>
                         </button>
                     </div>
                 </div>
             </div>
             <!-- Profile 2: Bryan Flores Umaña -->
             <div class="group relative w-full max-w-[520px] md:mt-12">
-                <div class="relative overflow-hidden aspect-[3/4] bg-surface-container-low">
+                <div class="relative overflow-hidden aspect-[3/4] bg-surface-container-low rounded-lg">
                     <img alt="Bryan Flores Umaña"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
                         data-alt="Professional man with glasses and a thoughtful expression in a workspace with 3D architectural models and blueprint displays"
@@ -219,97 +220,96 @@
                     </div>
                 </div>
                 <div
-                    class="mt-[-60px] relative z-10 ml-6 md:ml-12 mr-6 bg-surface-container-high p-8 md:p-12 shadow-[0_24px_48px_rgba(4,15,27,0.4)] backdrop-blur-sm border-l-4 border-primary">
-                    <h2 class="text-2xl md:text-3xl font-bold text-on-surface mb-2 font-headline">Bryan Flores Umaña
+                    class="mt-[-40px] sm:mt-[-50px] md:mt-[-60px] relative z-10 mx-3 sm:mx-4 md:ml-8 md:mr-4 bg-surface-container-high p-6 sm:p-8 md:p-12 shadow-[0_24px_48px_rgba(4,15,27,0.4)] backdrop-blur-sm border-l-4 border-primary rounded-lg">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface mb-1 md:mb-2 font-headline">Bryan Flores Umaña
                     </h2>
-                    <p class="text-primary font-label uppercase tracking-[0.2em] text-xs mb-4">Arquitecto</p>
-                    <p class="text-on-surface-variant font-body mb-6 text-sm leading-relaxed">
+                    <p class="text-primary font-label uppercase tracking-[0.2em] text-xs mb-3 md:mb-4">Arquitecto</p>
+                    <p class="text-on-surface-variant font-body mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
                         Estudiante universitario enfocado en mejorar el estadio con ideas creativas y funcionales. Bryan
                         aporta visión arquitectónica y detalle, asegurando un diseño atractivo y pensado para el usuario.
                     </p>
-                    <div class="flex gap-4">
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
                         <button
-                            class="bg-primary text-on-primary w-full py-3 rounded-lg font-bold flex justify-center items-center gap-2 hover:bg-primary-container transition-all active:scale-95">
-                            <span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
-                            Contactar
+                            class="bg-primary text-on-primary flex-1 py-2.5 md:py-3 rounded-lg font-bold text-sm md:text-base flex justify-center items-center gap-2 hover:bg-primary-container transition-all active:scale-95">
+                            <span class="material-symbols-outlined text-lg" data-icon="mail">mail</span>
+                            <span class="hidden sm:inline">Contactar</span>
+                            <span class="sm:hidden">Mail</span>
                         </button>
                         <button
-                            class="border border-outline-variant/30 text-primary w-full py-3 rounded-lg font-bold flex justify-center items-center gap-2 hover:bg-surface-variant transition-all active:scale-95">
-                            <span class="material-symbols-outlined text-sm" data-icon="phone">phone</span>
-                            Llamada
+                            class="border border-outline-variant/30 text-primary flex-1 py-2.5 md:py-3 rounded-lg font-bold text-sm md:text-base flex justify-center items-center gap-2 hover:bg-surface-variant transition-all active:scale-95">
+                            <span class="material-symbols-outlined text-lg" data-icon="phone">phone</span>
+                            <span class="hidden sm:inline">Llamada</span>
+                            <span class="sm:hidden">Tel</span>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Background Narrative / Quote -->
-        <div class="mt-32 border-t border-outline-variant/10 pt-16">
-            <div class="max-w-5xl mx-auto text-center">
-                <span class="text-primary font-headline text-8xl opacity-20 select-none">"</span>
-                <p class="text-2xl md:text-3xl font-headline italic text-on-surface -mt-12 leading-relaxed max-w-3xl mx-auto">
+        <div class="mt-16 sm:mt-24 md:mt-32 border-t border-outline-variant/10 pt-12 sm:pt-16">
+            <div class="max-w-5xl mx-auto text-center px-2">
+                <span class="text-primary font-headline text-6xl sm:text-7xl md:text-8xl opacity-20 select-none block">"</span>
+                <p class="text-lg sm:text-2xl md:text-3xl font-headline italic text-on-surface -mt-8 sm:-mt-10 md:-mt-12 leading-relaxed max-w-3xl mx-auto">
                     No construimos estructuras; diseñamos los legados donde la vida ocurre.
                 </p>
-                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    <div class="p-6 bg-surface-container-low rounded-lg">
-                        <h4 class="text-primary font-headline text-4xl mb-2">2+</h4>
-                        <p class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Años de experiencia</p>
+                <div class="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                    <div class="p-4 sm:p-6 bg-surface-container-low rounded-lg">
+                        <h4 class="text-primary font-headline text-3xl sm:text-4xl mb-2">2+</h4>
+                        <p class="text-on-surface-variant font-label text-[10px] sm:text-xs uppercase tracking-widest leading-tight">Años de experiencia</p>
                     </div>
-                    <div class="p-6 bg-surface-container-low rounded-lg">
-                        <h4 class="text-primary font-headline text-4xl mb-2">2</h4>
-                        <p class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Personas capaces de transformar ideas en realidad </p>
+                    <div class="p-4 sm:p-6 bg-surface-container-low rounded-lg">
+                        <h4 class="text-primary font-headline text-3xl sm:text-4xl mb-2">2</h4>
+                        <p class="text-on-surface-variant font-label text-[10px] sm:text-xs uppercase tracking-widest leading-tight">Personas capaces de transformar ideas en realidad</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <!-- Footer -->
-    <footer class="bg-[#081420] w-full border-t border-white/10">
-        <div class="max-w-[1200px] mx-auto px-6 py-20 text-center">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer class="bg-[#081420] w-full border-t border-white/10 mt-12 md:mt-16">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 <div>
-                    <span class="text-xl font-serif text-[#DAA520] mb-4 block">B&amp;R Co.</span>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8">
+                    <span class="text-lg md:text-xl font-serif text-[#DAA520] mb-4 block">B&amp;R Co.</span>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed mb-6 md:mb-8">
                         Elevando el estándar de la arquitectura técnica y el diseño de autor desde 2010.
                     </p>
-                    <div class="flex justify-center gap-4">
+                    <div class="flex justify-center gap-3 sm:gap-4">
                         <span
-                            class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary">language</span>
+                            class="material-symbols-outlined text-slate-500 text-2xl cursor-pointer hover:text-primary transition-colors duration-300">language</span>
                         <span
-                            class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary">share</span>
+                            class="material-symbols-outlined text-slate-500 text-2xl cursor-pointer hover:text-primary transition-colors duration-300">share</span>
                         <span
-                            class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary">mail</span>
+                            class="material-symbols-outlined text-slate-500 text-2xl cursor-pointer hover:text-primary transition-colors duration-300">mail</span>
                     </div>
                 </div>
                 <div>
-                    <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Navegación</h5>
-                    <ul class="space-y-4">
-                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-sm"
-                                href="/index.html">Home</a></li>
-                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-sm" href="#">Quienes
-                                Somos</a></li>
-                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-sm"
-                                href="projects.html">Projects</a></li>
-                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-sm"
-                                href="portafolio.html">Portafolio</a></li>
-                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-sm"
+                    <h5 class="text-white font-bold mb-4 md:mb-6 text-xs sm:text-sm uppercase tracking-widest">Navegación</h5>
+                    <ul class="space-y-2 md:space-y-4">
+                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-xs sm:text-sm"
+                                href="/index.html">Inicio</a></li>
+                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-xs sm:text-sm" href="about.html">Quienes Somos</a></li>
+                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-xs sm:text-sm"
+                                href="projects.html">Proyectos</a></li>
+                        <li><a class="text-slate-500 hover:text-[#c5a021] transition-all text-xs sm:text-sm"
                                 href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Contacto</h5>
-                    <address class="not-italic text-slate-500 text-sm space-y-4">
-                        <p>Santa María de Dota, <br /> San José, Costa Rica</p>
-                        <p>+506 8698 1314, <br /> +506 8673 9628</p>
+                    <h5 class="text-white font-bold mb-4 md:mb-6 text-xs sm:text-sm uppercase tracking-widest">Contacto</h5>
+                    <address class="not-italic text-slate-500 text-xs sm:text-sm space-y-2 md:space-y-4">
+                        <p>Santa María de Dota,<br /> San José, Costa Rica</p>
+                        <p>+506 8698 1314,<br /> +506 8673 9628</p>
                         <p>atelier@brco-arch.com</p>
                     </address>
                 </div>
             </div>
         </div>
-        <div class="px-6 py-8 border-t border-white/5 max-w-[1200px] mx-auto text-center">
-            <p class="text-slate-500 text-xs mb-4">© 2024 B&amp;R Co. Architectural Atelier. All rights reserved.</p>
-            <div class="flex justify-center flex-wrap gap-8">
-                <span class="text-slate-600 text-[10px] uppercase tracking-widest">ISO 9001 Certified</span>
-                <span class="text-slate-600 text-[10px] uppercase tracking-widest">Autodesk Platinum Partner</span>
+        <div class="px-4 sm:px-6 py-6 sm:py-8 border-t border-white/5 max-w-[1200px] mx-auto text-center">
+            <p class="text-slate-500 text-[10px] sm:text-xs mb-3 sm:mb-4">© 2024 B&amp;R Co. Architectural Atelier. All rights reserved.</p>
+            <div class="flex justify-center flex-wrap gap-4 sm:gap-8">
+                <span class="text-slate-600 text-[8px] sm:text-[10px] uppercase tracking-widest">ISO 9001 Certified</span>
+                <span class="text-slate-600 text-[8px] sm:text-[10px] uppercase tracking-widest">Autodesk Platinum Partner</span>
             </div>
         </div>
     </footer>
